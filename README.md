@@ -52,7 +52,7 @@ Das Programm kann mit <kbd>F5</kbd> gestartet werden.
 Auf Twitter sollte jetzt ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
 
 # 4. Travis CI
-Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe dazu auf http://travis-ci.com. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden. Aktiviere automatische Builds für dein Repository.
+Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe dazu auf http://travis-ci.org. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden. Aktiviere automatische Builds für dein Repository.
 
 Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden. Klicke dazu in Travis auf die Badge, wähle als Format “Markdown” aus, und kopiere den Text in die `README.md` in deinem Projekt.
 
