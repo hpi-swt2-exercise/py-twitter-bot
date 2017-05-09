@@ -2,6 +2,7 @@
 Really simple twitter bot on Heroku, tested with Travis CI
 
 HPI Schülerkolleg 2016/17 – Agile Softwareentwicklung
+
 Arian Treffer, Christoph Matthies
 
 # 1. Twitter
