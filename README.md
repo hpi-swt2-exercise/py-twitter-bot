@@ -60,6 +60,8 @@ Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt a
 
 Commite (Rechtsklick -> Git Commit) und pushe die Änderung, und beobachte auf der Travis-Seite wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
 
+[![Build Status](https://travis-ci.org/FlayInAHook/py-twitter-bot.svg?branch=master)](https://travis-ci.org/FlayInAHook/py-twitter-bot)
+
 # 5. Heroku
 
 ## 5.1 Account erstellen
