@@ -1,4 +1,4 @@
-# Ein einfacher Twitter-Bot
+# Twitter-Bot
 Really simple [Twitter](https://twitter.com/) bot for educational purposes, written in [Python](https://www.python.org/), continually tested with [Travis CI](https://travis-ci.org/), deployed on [Heroku](https://heroku.com/).
 
 # 1. Twitter
