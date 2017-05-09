@@ -39,7 +39,9 @@ Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem k
 Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
 Trage hier die Twitter Keys und Tokens ein.
 
-Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (Rechtsklick -> "Edit with IDLE") und mit F5 starten.
+Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (Rechtsklick -> "Edit with IDLE").
+IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
+Das Programm kann mit <kbd>F5</kbd> gestartet werden.
 Auf Twitter sollte jetzt ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
 
 # 3. Travis CI
@@ -82,9 +84,9 @@ Damit der Bot tatsächlich ausgeführt wird, wechselst du nun auf das Tab “Res
 Die logs, d.h. die Nachrichten, die der Bot schreibt, können im Heroku-Interface nachgelesen werden. Hier kannst du überprüfen, ob der Bot erfolgreichen starten konnte. Falls du noch einen Twitter-Account hast, schreibe ihm doch einfach mal “hi!”. In spätestens 10 Minuten solltest du eine Antwort bekommen.
 
 # 5. Und noch viel weiter
-Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu erweitern. Öffne dazu die `tweet_text.py` in der IDLE. Tipp: wenn du den Bot testen möchtest, ohne jedes mal einen neuen Tweet zu senden, drücke F5 um die Python Shell zu öffnen.
+Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu erweitern. Öffne dazu die `tweet_text.py` in der IDLE. Tipp: wenn du den Bot testen möchtest, ohne jedes mal einen neuen Tweet zu senden, drücke <kbd>F5</kbd> um die Python Shell zu öffnen.
 
-Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen. Mit `Alt+n` und `Alt+p` musst du die Aufrufe nicht jedes mal neu schreiben.
+Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen. Mit <kbd>Alt</kbd> + <kbd>n</kbd> und <kbd>Alt</kbd> + <kbd>p</kbd> musst du die Aufrufe nicht jedes mal neu schreiben.
 
 ## 5.1 Externe Daten anfordern
 Natürlich kann der Bot statt nur mit der Uhrzeit zu antworten auch beliebige andere Dinge tweeten. Insbesondere sollte er vielleicht mit der Außenwelt kommunizieren um weitere Daten zu erhalten. Solche Schnittstellen, die mit Programmen einfach nutzbar sind, heißen APIs (Application programming interface). Zum Beispiel könnten Chuck Norris Witze abgefragt und getweetet werden:
