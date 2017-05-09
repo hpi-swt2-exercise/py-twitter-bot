@@ -38,7 +38,7 @@ Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem k
 # 3. Projekt lokal einrichten
 
 ## 3.1 Abhängigkeiten installieren
-Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirments.txt` festgehalten.
+Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten.
 Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
 Sie können mit `pip install -r requirements.txt` auf der Kommandozeile installiert werden.
 
