@@ -3,7 +3,7 @@ Really simple [Twitter](https://twitter.com/) bot for educational purposes, writ
 
 # 1. Twitter
 ## 1.1 Account anlegen
-Als erstes benötigst du einen Twitter-Account, con dem aus er Bot tweeten soll.
+Als erstes benötigst du einen Twitter-Account, von dem aus er Bot tweeten soll.
 Falls du bereits einen Account hast, den du hierfür verwenden möchtest, kannst du diesen Schritt überspringen. Falls du aber später mit deinem Bot interagieren möchtest, solltest du trotzdem einen neuen Account anlegen.
 
 ## 1.2 API Keys erstellen  
