@@ -40,7 +40,7 @@ Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem k
 ## 3.1 Abhängigkeiten installieren
 Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten.
 Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
-Sie können mit `pip install -r requirements.txt` auf der Kommandozeile installiert werden.
+Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen, oder per Kommandozeile: `C:\Python27\python.exe <Pfad zum Repo>\requirements.bat`.
 
 ## 3.2 Twitter Credentials im Bot eintragen
 Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
