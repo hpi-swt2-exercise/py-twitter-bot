@@ -91,7 +91,7 @@ Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu er
 
 Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen. Mit `Alt+n` und `Alt+p` musst du die Aufrufe nicht jedes mal neu schreiben.
 
-
+## 5.1 Externe Daten anfordern
 Natürlich kann der Bot statt nur mit der Uhrzeit zu antworten auch beliebige andere Dinge tweeten. Insbesondere sollte er vielleicht mit der Außenwelt kommunizieren um weitere Daten zu erhalten. Solche Schnittstellen, die mit Programmen einfach nutzbar sind, heißen APIs (Application programming interface). Zum Beispiel könnten Chuck Norris Witze abgefragt und getweetet werden:
 
 ```python
@@ -100,4 +100,17 @@ from requests import get
 data = get('https://api.chucknorris.io/jokes/random').json()
 joke = data['value']
 print joke
+```
+## 5.2 Zufall
+Möglicherweise sollte der Bot nicht immer nach demselben Schema tweeten, sondern zufällig unterschiedliche Text tweeten.
+Dazu kann das `random` Modul von Python verwendet werden. Beispiel:
+
+```python
+import random
+
+# random() returns a floating point number in the range [0.0, 1.0)
+if random.random() > 0.5:
+    print('GROSS')
+else:
+    print('klein')
 ```
