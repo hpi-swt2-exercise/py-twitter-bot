@@ -1,9 +1,5 @@
 # Ein einfacher Twitter-Bot
-Really simple twitter bot on Heroku, tested with Travis CI
-
-HPI Schülerkolleg 2016/17 – Agile Softwareentwicklung
-
-Arian Treffer, Christoph Matthies
+Really simple [Twitter](https://twitter.com/) bot for educational purposes, written in [Python](https://www.python.org/), continually tested with [Travis CI](https://travis-ci.org/), deployed on [Heroku](https://heroku.com/).
 
 # 1. Twitter
 ## 1.1 Account anlegen
@@ -31,7 +27,6 @@ Falls nicht vorhanden, erstelle einen Account auf http://github.com.
 
 Um dir einen schnelleren Einstieg zu geben, haben wir bereits ein Programm vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository). Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
 
-
 <p align="center"><img src="img/image7.png" width="300" align="right"></p>
 
 Unter “Clone or Download” auf der Github-Seite deines neuen Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst.
@@ -40,9 +35,9 @@ Unter “Clone or Download” auf der Github-Seite deines neuen Projekts findest
 
 Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, oder über das Kontextmenü im Windows-Explorer das Projekt herunterladen.
 
-
 ## 2.3 Twitter Credentials im Bot eintragen
-Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei “credentials.example.py” und nenne die Kopie “credentials.py”. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird. Trage hier die Twitter Keys und Tokens ein.
+Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
+Trage hier die Twitter Keys und Tokens ein.
 
 Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (Rechtsklick -> "Edit with IDLE") und mit F5 starten.
 Auf Twitter sollte jetzt ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
