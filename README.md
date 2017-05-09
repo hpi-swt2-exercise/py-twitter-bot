@@ -57,6 +57,7 @@ Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe
 Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden. Klicke dazu in Travis auf die Badge, wähle als Format “Markdown” aus, und kopiere den Text in die `README.md` in deinem Projekt.
 
 <p align="center"><img src="img/image3.png" width="600" align="center"></p>
+[![Build Status](https://travis-ci.org/blackchip77/py-twitter-bot.svg?branch=master)](https://travis-ci.org/blackchip77/py-twitter-bot)
 
 Commite (Rechtsklick -> Git Commit) und pushe die Änderung, und beobachte auf der Travis-Seite wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
 
