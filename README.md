@@ -35,7 +35,14 @@ Unter “Clone or Download” auf der Github-Seite deines neuen Projekts findest
 
 Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, oder über das Kontextmenü im Windows-Explorer das Projekt herunterladen.
 
-## 2.3 Twitter Credentials im Bot eintragen
+# 3. Projekt lokal einrichten
+
+## 3.1 Abhängigkeiten installieren
+Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirments.txt` festgehalten.
+Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
+Sie können mit `pip install -r requirements.txt` auf der Kommandozeile installiert werden.
+
+## 3.2 Twitter Credentials im Bot eintragen
 Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
 Trage hier die Twitter Keys und Tokens ein.
 
@@ -44,7 +51,7 @@ IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots.
 Das Programm kann mit <kbd>F5</kbd> gestartet werden.
 Auf Twitter sollte jetzt ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
 
-# 3. Travis CI
+# 4. Travis CI
 Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe dazu auf http://travis-ci.com. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden. Aktiviere automatische Builds für dein Repository.
 
 Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden. Klicke dazu in Travis auf die Badge, wähle als Format “Markdown” aus, und kopiere den Text in die `README.md` in deinem Projekt.
@@ -53,13 +60,13 @@ Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt a
 
 Commite (Rechtsklick -> Git Commit) und pushe die Änderung, und beobachte auf der Travis-Seite wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
 
-# 4. Heroku
+# 5. Heroku
 
-## 4.1 Account erstellen
+## 5.1 Account erstellen
 
 Damit du deinen Twitter-Bot nicht immer per Hand ausführen musst, möchten wir ihn jetzt auf Heroku deployen. Erstelle dazu einen Account auf http://heroku.com.
 
-## 4.2 Anwendung erstellen
+## 5.2 Anwendung erstellen
 
 <p align="center"><img src="img/image9.png" width="200" align="right"></p>
 
@@ -73,7 +80,7 @@ Setze das Häkchen bei “Wait for CI to pass before deploy” und klicke auf �
 
 Auch auf Heroku muss dein Bot wissen, wie er sich bei Twitter anmelden kann. Damit die geheimen Daten nicht in einer Datei gespeichert werden müssen, kannst du sie direkt in Heroku konfigurieren. Gehe auf das Tab “Settings”, klicke auf “Reveal Config Vars” und trage dort die 4 Schlüssel ein.
 
-## 4.3 Anwendung auf Heroku starten
+## 5.3 Anwendung auf Heroku starten
 
 <p align="center"><img src="img/image2.png" width="300" align="right"></p>
 
@@ -83,7 +90,7 @@ Damit der Bot tatsächlich ausgeführt wird, wechselst du nun auf das Tab “Res
 
 Die logs, d.h. die Nachrichten, die der Bot schreibt, können im Heroku-Interface nachgelesen werden. Hier kannst du überprüfen, ob der Bot erfolgreichen starten konnte. Falls du noch einen Twitter-Account hast, schreibe ihm doch einfach mal “hi!”. In spätestens 10 Minuten solltest du eine Antwort bekommen.
 
-# 5. Und noch viel weiter
+# 6. Und noch viel weiter
 Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu erweitern. Öffne dazu die `tweet_text.py` in der IDLE. Tipp: wenn du den Bot testen möchtest, ohne jedes mal einen neuen Tweet zu senden, drücke <kbd>F5</kbd> um die Python Shell zu öffnen.
 
 Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen. Mit <kbd>Alt</kbd> + <kbd>n</kbd> und <kbd>Alt</kbd> + <kbd>p</kbd> musst du die Aufrufe nicht jedes mal neu schreiben.
@@ -92,7 +99,7 @@ Ein Cheatsheet für Python ist hier zu finden: [link](https://ddi.ifi.lmu.de/pro
 
 Funktionen um mit Strings zu arbeiten gibt es [hier](https://docs.python.org/2/library/stdtypes.html#string-methods)
 
-## 5.1 Externe Daten anfordern
+## 6.1 Externe Daten anfordern
 Natürlich kann der Bot statt nur mit der Uhrzeit zu antworten auch beliebige andere Dinge tweeten. Insbesondere sollte er vielleicht mit der Außenwelt kommunizieren um weitere Daten zu erhalten. Solche Schnittstellen, die mit Programmen einfach nutzbar sind, heißen APIs (Application programming interface). Zum Beispiel könnten Chuck Norris Witze abgefragt und getweetet werden:
 
 ```python
@@ -102,7 +109,7 @@ data = get('https://api.chucknorris.io/jokes/random').json()
 joke = data['value']
 print joke
 ```
-## 5.2 Zufall
+## 6.2 Zufall
 Möglicherweise sollte der Bot nicht immer nach demselben Schema tweeten, sondern zufällig unterschiedliche Text tweeten.
 Dazu kann das `random` Modul von Python verwendet werden. Beispiel:
 
