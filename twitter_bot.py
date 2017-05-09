@@ -55,16 +55,16 @@ def setup():
     print('tweet count:', info['statuses_count'])
     print('favourite count:', info['favourites_count'])
     print('friends count:', info['friends_count'])
-
-    rate_limit_remaining = account.get_lastfunction_header('x-rate-limit-remaining')
-    print('rate limit remaining', rate_limit_remaining)
     return account
 
 def tweet(account):
     """check for mentions and answer, otherwise tweet idle tweet"""
     replied = False
+    mentions = account.get_mentions_timeline()
+    rate_limit_remaining = account.get_lastfunction_header('x-rate-limit-remaining')
+    print('rate limit remaining', rate_limit_remaining)
     # for each mention
-    for tweet in account.get_mentions_timeline():
+    for tweet in mentions:
         # if the tweet was sent after the last time we checked mentions
         if tweet_minutes_ago(tweet) < INTERVAL_MINUTES:
             # get reply from tweet_text.py
@@ -75,8 +75,6 @@ def tweet(account):
                     print('Replying to https://twitter.com/statuses/{id}'.format(id=tweet['id']))
                     sent_tweet = account.update_status(status=reply_text, in_reply_to_status_id=tweet['id'])
                     print('https://twitter.com/statuses/{id}'.format(id=sent_tweet['id']))
-                    rate_limit_remaining = account.get_lastfunction_header('x-rate-limit-remaining')
-                    print('rate limit remaining', rate_limit_remaining)
                 except TwythonError as e:
                     print(e)
     if not replied:
@@ -86,8 +84,6 @@ def tweet(account):
         tweet = account.update_status(status=text)
         # Print some info on the sent tweet
         print('https://twitter.com/statuses/{id}'.format(id=tweet['id']))
-        rate_limit_remaining = account.get_lastfunction_header('x-rate-limit-remaining')
-        print('rate limit remaining', rate_limit_remaining)
 
 if __name__ == "__main__":
     account = setup()

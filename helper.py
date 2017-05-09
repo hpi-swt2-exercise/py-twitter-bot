@@ -1,6 +1,9 @@
 """Helper functions"""
 
+# Allows using time related functions
 from datetime import datetime
+# convert times according to time zones
+from pytz import timezone
 
 def parse_tweet_time_stamp(tweet):
     """Parse twitter time stamp into a Python datetime object"""
