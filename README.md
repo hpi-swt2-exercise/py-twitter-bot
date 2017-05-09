@@ -40,7 +40,7 @@ Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem k
 ## 3.1 Abhängigkeiten installieren
 Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten.
 Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
-Sie können mit `pip install -r requirements.txt` auf der Kommandozeile installiert werden.
+Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen, oder per Kommandozeile: `C:\Python27\python.exe <Pfad zum Repo>\requirements.bat`.
 
 ## 3.2 Twitter Credentials im Bot eintragen
 Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
@@ -52,7 +52,7 @@ Das Programm kann mit <kbd>F5</kbd> gestartet werden.
 Auf Twitter sollte jetzt ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
 
 # 4. Travis CI
-Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe dazu auf http://travis-ci.com. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden. Aktiviere automatische Builds für dein Repository.
+Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe dazu auf http://travis-ci.org. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden. Aktiviere automatische Builds für dein Repository.
 
 Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden. Klicke dazu in Travis auf die Badge, wähle als Format “Markdown” aus, und kopiere den Text in die `README.md` in deinem Projekt.
 
