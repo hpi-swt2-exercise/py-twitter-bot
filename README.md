@@ -66,7 +66,14 @@ Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt a
 
 <p align="center"><img src="img/image3.png" width="600" align="center"></p>
 
-Commite (Rechtsklick -> Git Commit) und pushe die Änderung, und beobachte auf der Travis-Seite wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
+Commite nun deine Änderung.
+GitExt (Rechtsklick -> GitExt Commit) zeigt die welche Änderungen du vorgenommen hast (siehe Abb., 1 und 2).
+Stage (3) die geänderten Dateien damit die Änderung Teil des Commits ist.
+Trage dann eine Commit-Nachricht ein (4) und bestätige den Commit (5).
+
+<p align="center"><img src="img/image5b.png" width="600" align="center"></p>
+
+Nach dem Commit kannst du die Änderung pushen und auf der Travis-Seite beobachten wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
 
 # 5. Heroku
 
