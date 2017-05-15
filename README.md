@@ -27,13 +27,21 @@ Falls nicht vorhanden, erstelle einen Account auf http://github.com.
 
 Um dir einen schnelleren Einstieg zu geben, haben wir bereits ein Programm vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository). Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
 
+## 2.3 Github-Repository auf den Rechner clonen
+
+Um die Dateien lokal zu bearbeiten, muss das Repository auf deinen Rechner geklont werden.
+Grundsätzlich kannst du Git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche nutzen.
+Auf den Pool-Rechnern ist bereits "GitExt" installiert (falls ihr auf eurem eigenen Windows-Rechner Git benutzen möchtet, empfehlen wir TortoiseGit). 
+
 <p align="center"><img src="img/image7.png" width="300" align="right"></p>
 
 Unter “Clone or Download” auf der Github-Seite deines neuen Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst.
 
 <p align="center"><img src="img/image5.png" width="300" align="right"></p>
 
-Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, oder über das Kontextmenü im Windows-Explorer das Projekt herunterladen.
+Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. 
+In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, 
+oder über das Kontextmenü im Windows-Explorer (Rechtsklick -> GitExt clone) das Projekt klonen.
 
 # 3. Projekt lokal einrichten
 
