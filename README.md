@@ -1,6 +1,7 @@
 # Twitter-Bot
 Really simple [Twitter](https://twitter.com/) bot for educational purposes, written in [Python](https://www.python.org/), continually tested with [Travis CI](https://travis-ci.org/), deployed on [Heroku](https://heroku.com/).
 
+
 [![Build Status](https://travis-ci.org/Schuelerkolleg/py-twitter-bot.svg?branch=master)](https://travis-ci.org/Schuelerkolleg/py-twitter-bot)
 
 # 1. Twitter
