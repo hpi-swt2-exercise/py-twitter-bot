@@ -3,20 +3,19 @@ Really simple [Twitter](https://twitter.com/) bot for educational purposes, writ
 
 # 1. Twitter
 ## 1.1 Account anlegen
-Als erstes benötigst du einen Twitter-Account, von dem aus er Bot tweeten soll.
-Falls du bereits einen Account hast, den du hierfür verwenden möchtest, kannst du diesen Schritt überspringen. Falls du aber später mit deinem Bot interagieren möchtest, solltest du trotzdem einen neuen Account anlegen.
+* Der Bot benötigt Zugang zu einem Twitter-Account
+* Falls ein bestehender Account verwendet werden soll: Schritt überspringen.
 
 ## 1.2 API Keys erstellen  
 <p align="center"><img src="img/image4.png" width="300" align="right"></p>
-Damit deine Anwendung auf deinen Twitter-Account zugreifen kann, muss sie sich gegenüber Twitter authentifizieren können. Dies geschieht nicht über dein Passwort, sondern über API Keys und Token.
 
-Diese Token sind, wie Passwörter, geheimzuhalten. Denke später daran dass alles, was du im Git-Repository hochlädst, öffentlich ist!
+Der Bot benötigt für den Zugriff auf Twitter API keys und tokens (statt Username und Passwort). Diese Token sind, wie Passwörter, geheimzuhalten. Alles, was du im GitHub-Repository hochlädst ist öffentlich!
 
-Gehe auf https://apps.twitter.com/ und klicke auf “Create New App” und fülle auf der folgenden Seite das Formular aus. Als “Website” kannst du eine beliebige gültige URL angeben, “Callback URL” kannst du leer lassen.
-
-Anschließend wirst du auf die Übersichtsseite für deine Twitter-Anwendung weitergeleitet. Unter dem Tab “Keys and Access Tokens” findest du Consumer (oder API-) Key und Secret, außerdem kannst du dort Access Token und Secret erstellen.
-
-Speicher die 4 Schlüssel in einer Text-Datei oder lass das Browser-Tab offen während du weiterarbeitest.
+* Gehe auf https://apps.twitter.com/ und klicke auf `Create New App`
+* Bei "Website" eine beliebige gültige URL angeben (z.B. `http://hpi.de`), "Callback URL" kann leer bleiben.
+* Auf der Übersichtsseite der Twitter-Anwendung: Unter dem Tab "Keys and Access Tokens" findest du `Consumer Key` und `Consumer Secret`.
+* Nach einem Klick auf "Create my access token" weiter unten auf der Seite können `Access Token` und `Access Token Secret` abgelesen werden.
+* Speicher die 4 Schlüssel in einer Text-Datei oder lass das Browser-Tab offen während du weiterarbeitest.
 
 # 2. Github
 ## 2.1. Account erstellen
@@ -27,13 +26,21 @@ Falls nicht vorhanden, erstelle einen Account auf http://github.com.
 
 Um dir einen schnelleren Einstieg zu geben, haben wir bereits ein Programm vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository). Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
 
+## 2.3 Github-Repository auf den Rechner clonen
+
+Um die Dateien lokal zu bearbeiten, muss das Repository auf deinen Rechner geklont werden.
+Grundsätzlich kannst du Git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche nutzen.
+Auf den Pool-Rechnern ist bereits "GitExt" installiert (falls ihr auf eurem eigenen Windows-Rechner Git benutzen möchtet, empfehlen wir TortoiseGit). 
+
 <p align="center"><img src="img/image7.png" width="300" align="right"></p>
 
 Unter “Clone or Download” auf der Github-Seite deines neuen Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst.
 
 <p align="center"><img src="img/image5.png" width="300" align="right"></p>
 
-Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, oder über das Kontextmenü im Windows-Explorer das Projekt herunterladen.
+Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. 
+In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, 
+oder über das Kontextmenü im Windows-Explorer (Rechtsklick -> GitExt clone) das Projekt klonen.
 
 # 3. Projekt lokal einrichten
 
@@ -58,7 +65,14 @@ Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt a
 
 <p align="center"><img src="img/image3.png" width="600" align="center"></p>
 
-Commite (Rechtsklick -> Git Commit) und pushe die Änderung, und beobachte auf der Travis-Seite wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
+Commite nun deine Änderung.
+GitExt (Rechtsklick -> GitExt Commit) zeigt die welche Änderungen du vorgenommen hast (siehe Abb., 1 und 2).
+Stage (3) die geänderten Dateien damit die Änderung Teil des Commits ist.
+Trage dann eine Commit-Nachricht ein (4) und bestätige den Commit (5).
+
+<p align="center"><img src="img/image5b.png" width="600" align="center"></p>
+
+Nach dem Commit kannst du die Änderung pushen und auf der Travis-Seite beobachten wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
 
 # 5. Heroku
 
