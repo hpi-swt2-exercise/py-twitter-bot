@@ -53,9 +53,19 @@ Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in
 * Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
 * Trage hier die Twitter Access Keys und Tokens aus Schritt 1.2 ein.
 
-* Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (Rechtsklick -> "Edit with IDLE"). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
+* Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (`Rechtsklick -> "Edit with IDLE"`). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
 * Das Programm kann mit <kbd>F5</kbd> gestartet werden.
 * Die Ausgabe enthät einen Link auf den soeben gesendeten Tweet. Auf Twitter sollte ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
+
+## 3.3 Die erste Änderung
+Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:SS on a DAY (DD-MM-YYYY)." Wenn du möchtest, ändere das Format der Uhrzeit, z.B. mit dem Names deines Bots.
+
+* Öffne dazu die `tweet_text.py` in der IDLE und ändere den Inhalt der Variable `text` (Zeile 22), z.B. in
+
+`text = berlin_time.strftime("Der HPI-Schülerkolleg Bot sagt: %H:%M:%S! %A (%d-%m-%Y).")`
+
+* Speichere deine Änderungen
+* Führe die `twitter_bot.py` aus (wiederum mit IDLE und <kbd>F5</kbd>) und schaue nach, ob der Bot nun anders twittert.
 
 # 4. Travis CI
 Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
@@ -73,7 +83,7 @@ Wenn du das nächste mal eine Änderung "push"st (auf den Server bei Github übe
 * Commite nun deine Änderung: 
   * GitExt (`Rechtsklick -> GitExt Commit`) zeigt die welche Änderungen du vorgenommen hast (siehe 1 und 2).
   * Stage (3) die geänderten Dateien damit die Änderung Teil des Commits ist.
-  * Trage dann eine Commit-Nachricht ein (4) und bestätige den Commit (5).
+  * Trage dann eine Commit-Nachricht ein (4), die die Änderungen zusammenfasst und bestätige den Commit (5).
 
 <p align="center"><img src="img/image5b.png" width="450" align="center"></p>
 
@@ -108,16 +118,19 @@ Auch auf Heroku muss der Bot wissen, wie er sich bei Twitter anmelden kann. Dami
 
 <p align="center"><img src="img/image2.png" width="300" align="right"></p>
 
-Damit der Bot tatsächlich ausgeführt wird, wechselst du nun auf das Tab “Resources” und aktivierst dort den Clock-Prozess.
+* Damit der Bot tatsächlich ausgeführt wird, wechselst du nun auf das Tab `Resources` und aktivierst dort den Clock-Prozess.
 
 <p align="center"><img src="img/image1.png" width="200" align="right"></p>
 
 Die logs, d.h. die Nachrichten, die der Bot schreibt, können im Heroku-Interface nachgelesen werden. Hier kannst du überprüfen, ob der Bot erfolgreichen starten konnte. Falls du noch einen Twitter-Account hast, schreibe ihm doch einfach mal “hi!”. In spätestens 10 Minuten solltest du eine Antwort bekommen.
 
 # 6. Und noch viel weiter
-Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu erweitern. Öffne dazu die `tweet_text.py` in der IDLE. Tipp: wenn du den Bot testen möchtest, ohne jedes mal einen neuen Tweet zu senden, drücke <kbd>F5</kbd> um die Python Shell zu öffnen.
+Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu erweitern.
 
-Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen. Mit <kbd>Alt</kbd> + <kbd>n</kbd> und <kbd>Alt</kbd> + <kbd>p</kbd> musst du die Aufrufe nicht jedes mal neu schreiben.
+* Öffne dazu die `tweet_text.py` in der IDLE. Tipp: wenn du den Bot testen möchtest, ohne jedes mal einen neuen Tweet zu senden, drücke <kbd>F5</kbd> um die Python Shell zu öffnen.
+
+* Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen.
+* Mit <kbd>Alt</kbd> + <kbd>n</kbd> und <kbd>Alt</kbd> + <kbd>p</kbd> musst du die Aufrufe nicht jedes mal neu schreiben.
 
 Ein Cheatsheet für Python ist hier zu finden: [link](https://ddi.ifi.lmu.de/probestudium/2013/ws-i-3d-programmierung/tutorials/python-referenzkarte)
 
