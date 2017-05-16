@@ -65,14 +65,15 @@ Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
 * Gehe dazu auf http://travis-ci.org. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden.
 * Aktiviere automatische Builds für dein Repository.
 
-Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden. Klicke dazu in Travis auf die Badge, wähle als Format “Markdown” aus, und kopiere den Text in die `README.md` in deinem Projekt.
+Wenn du das nächste mal eine Änderung "push"st (auf den Server bei Github überträgst), wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden.
+* Klicke dazu in Travis auf die Badge, wähle als Format "Markdown" aus, und kopiere den Text in die `README.md` in deinem Projekt.
 
 <p align="center"><img src="img/image3.png" width="600" align="center"></p>
 
-Commite nun deine Änderung.
-GitExt (Rechtsklick -> GitExt Commit) zeigt die welche Änderungen du vorgenommen hast (siehe Abb., 1 und 2).
-Stage (3) die geänderten Dateien damit die Änderung Teil des Commits ist.
-Trage dann eine Commit-Nachricht ein (4) und bestätige den Commit (5).
+* Commite nun deine Änderung: 
+  * GitExt (`Rechtsklick -> GitExt Commit`) zeigt die welche Änderungen du vorgenommen hast (siehe 1 und 2).
+  * Stage (3) die geänderten Dateien damit die Änderung Teil des Commits ist.
+  * Trage dann eine Commit-Nachricht ein (4) und bestätige den Commit (5).
 
 <p align="center"><img src="img/image5b.png" width="600" align="center"></p>
 
