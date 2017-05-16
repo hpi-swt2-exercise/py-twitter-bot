@@ -68,14 +68,14 @@ Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
 Wenn du das nächste mal eine Änderung "push"st (auf den Server bei Github überträgst), wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden.
 * Klicke dazu in Travis auf die Badge, wähle als Format "Markdown" aus, und kopiere den Text in die `README.md` in deinem Projekt.
 
-<p align="center"><img src="img/image3.png" width="600" align="center"></p>
+<p align="center"><img src="img/image3.png" width="450" align="center"></p>
 
 * Commite nun deine Änderung: 
   * GitExt (`Rechtsklick -> GitExt Commit`) zeigt die welche Änderungen du vorgenommen hast (siehe 1 und 2).
   * Stage (3) die geänderten Dateien damit die Änderung Teil des Commits ist.
   * Trage dann eine Commit-Nachricht ein (4) und bestätige den Commit (5).
 
-<p align="center"><img src="img/image5b.png" width="600" align="center"></p>
+<p align="center"><img src="img/image5b.png" width="450" align="center"></p>
 
 Nach dem Commit kannst du die Änderung pushen und auf der Travis-Seite beobachten wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
 
@@ -83,21 +83,26 @@ Nach dem Commit kannst du die Änderung pushen und auf der Travis-Seite beobacht
 
 ## 5.1 Account erstellen
 
-Damit du deinen Twitter-Bot nicht immer per Hand ausführen musst, möchten wir ihn jetzt auf Heroku deployen. Erstelle dazu einen Account auf http://heroku.com.
+Damit du deinen Twitter-Bot nicht immer per Hand ausführen musst, möchten wir ihn jetzt auf Heroku deployen. Heroku ist eine Plattform auf der Code kontinuierlich auf Servern ausgeführt werden kann.
+
+* Erstelle dazu einen Account auf http://heroku.com.
 
 ## 5.2 Anwendung erstellen
 
 <p align="center"><img src="img/image9.png" width="200" align="right"></p>
 
-Auf dem Dashboard, klicke auf “New” und “Create new app” und erstelle eine neue Anwendung.
-
-Unter “Deploy” wählst du “Github” als “Deployment Method”. Verbinde deinen Github-Account und wähle das richtige Repository aus.
+* Auf dem Heroku-Dashboard, klicke auf `New` und `Create new app` und erstelle eine neue Anwendung.
+* Unter `Deploy` wählst du “Github” als “Deployment Method”.
+* Verbinde deinen Github-Account und wähle das richtige Repository aus.
 
 <p align="center"><img src="img/image8.png" width="400" align="right"></p>
 
-Setze das Häkchen bei “Wait for CI to pass before deploy” und klicke auf “Enable Automatic Deploys”. Da automatische Deploys erst nach einem Push passieren, klickst du außerdem einmal unter “Manual Deploy” auf “Deploy Branch”.
+* Setze das Häkchen bei “Wait for CI to pass before deploy” und klicke auf “Enable Automatic Deploys”.
+* Da automatische Deploys erst nach einem Push passieren, kannst du außerdem unter “Manual Deploy” auf “Deploy Branch” klicken um ein deployment (das übertragen des codes zum Server) anzustoßen.
 
-Auch auf Heroku muss dein Bot wissen, wie er sich bei Twitter anmelden kann. Damit die geheimen Daten nicht in einer Datei gespeichert werden müssen, kannst du sie direkt in Heroku konfigurieren. Gehe auf das Tab “Settings”, klicke auf “Reveal Config Vars” und trage dort die 4 Schlüssel ein.
+Auch auf Heroku muss der Bot wissen, wie er sich bei Twitter anmelden kann. Damit die geheimen Daten nicht in einer Datei gespeichert werden müssen, kannst du sie direkt in Heroku konfigurieren.
+
+* Gehe auf das Tab `Settings`, klicke auf `Reveal Config Vars` und trage dort die 4 Access Keys / Tokens des Bots ein.
 
 ## 5.3 Anwendung auf Heroku starten
 
