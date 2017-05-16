@@ -3,7 +3,8 @@ Really simple [Twitter](https://twitter.com/) bot for educational purposes, writ
 
 # 1. Twitter
 ## 1.1 Account anlegen
-* Der Bot benötigt Zugang zu einem Twitter-Account
+Der Bot benötigt Zugang zu einem Twitter-Account
+
 * Falls ein bestehender Account verwendet werden soll: Schritt überspringen.
 
 ## 1.2 API Keys erstellen  
@@ -19,44 +20,42 @@ Der Bot benötigt für den Zugriff auf Twitter API keys und tokens (statt Userna
 
 # 2. Github
 ## 2.1. Account erstellen
-Falls nicht vorhanden, erstelle einen Account auf http://github.com.
+* Falls nicht vorhanden, erstelle einen GitHub-Account auf http://github.com.
 
 ## 2.2 Beispiel-Repository forken
 <p align="center"><img src="img/image6.png" width="300" align="right"></p>
 
-Um dir einen schnelleren Einstieg zu geben, haben wir bereits ein Programm vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository). Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
+Wir haben bereits einen Bot vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository).
+* Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
 
 ## 2.3 Github-Repository auf den Rechner clonen
 
-Um die Dateien lokal zu bearbeiten, muss das Repository auf deinen Rechner geklont werden.
-Grundsätzlich kannst du Git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche nutzen.
-Auf den Pool-Rechnern ist bereits "GitExt" installiert (falls ihr auf eurem eigenen Windows-Rechner Git benutzen möchtet, empfehlen wir TortoiseGit). 
+Um die Dateien lokal zu bearbeiten und die Verbindung zu Github herzustellen, muss das Repository auf deinen Rechner mit git "geklont" werden.
+Grundsätzlich kann git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche (GUI) nutzen.
+Auf den Rechnern ist die GUI "GitExt" installiert (falls ihr auf eurem eigenen Windows-Rechner Git benutzen möchtet, empfehlen wir [TortoiseGit](https://tortoisegit.org/)). 
 
 <p align="center"><img src="img/image7.png" width="300" align="right"></p>
 
-Unter “Clone or Download” auf der Github-Seite deines neuen Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst.
+* Unter “Clone or Download” auf der Github-Seite deines Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst. (Der Download als Zip reicht nicht!)
 
 <p align="center"><img src="img/image5.png" width="300" align="right"></p>
 
-Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. 
-In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, 
-oder über das Kontextmenü im Windows-Explorer (Rechtsklick -> GitExt clone) das Projekt klonen.
+* Lege in deinem persönlichen Verzeichnis einen neuen Ordner an. 
+* In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, oder über das Kontextmenü im Windows-Explorer `(Rechtsklick -> GitExt clone)` das Projekt klonen.
 
 # 3. Projekt lokal einrichten
 
 ## 3.1 Abhängigkeiten installieren
-Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten.
-Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
-Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen, oder per Kommandozeile: `C:\Python27\python.exe <Pfad zum Repo>\requirements.bat`.
+Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten. Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
+* Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen, oder per Kommandozeile: `C:\Python27\python.exe <Pfad zum Repo>\requirements.bat`.
 
 ## 3.2 Twitter Credentials im Bot eintragen
-Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
-Trage hier die Twitter Keys und Tokens ein.
+* Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
+* Trage hier die Twitter Access Keys und Tokens aus Schritt 1.2 ein.
 
-Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (Rechtsklick -> "Edit with IDLE").
-IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
-Das Programm kann mit <kbd>F5</kbd> gestartet werden.
-Auf Twitter sollte jetzt ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
+* Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (Rechtsklick -> "Edit with IDLE"). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
+* Das Programm kann mit <kbd>F5</kbd> gestartet werden.
+* Die Ausgabe enthät einen Link auf den soeben gesendeten Tweet. Auf Twitter sollte ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
 
 # 4. Travis CI
 Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe dazu auf http://travis-ci.org. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden. Aktiviere automatische Builds für dein Repository.
