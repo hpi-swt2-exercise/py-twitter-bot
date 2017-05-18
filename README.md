@@ -3,97 +3,134 @@ Really simple [Twitter](https://twitter.com/) bot for educational purposes, writ
 
 # 1. Twitter
 ## 1.1 Account anlegen
-Als erstes benötigst du einen Twitter-Account, von dem aus er Bot tweeten soll.
-Falls du bereits einen Account hast, den du hierfür verwenden möchtest, kannst du diesen Schritt überspringen. Falls du aber später mit deinem Bot interagieren möchtest, solltest du trotzdem einen neuen Account anlegen.
+Der Bot benötigt Zugang zu einem Twitter-Account
+
+* Falls ein bestehender Account verwendet werden soll: Schritt überspringen.
 
 ## 1.2 API Keys erstellen  
 <p align="center"><img src="img/image4.png" width="300" align="right"></p>
-Damit deine Anwendung auf deinen Twitter-Account zugreifen kann, muss sie sich gegenüber Twitter authentifizieren können. Dies geschieht nicht über dein Passwort, sondern über API Keys und Token.
 
-Diese Token sind, wie Passwörter, geheimzuhalten. Denke später daran dass alles, was du im Git-Repository hochlädst, öffentlich ist!
+Der Bot benötigt für den Zugriff auf Twitter API keys und tokens (statt Username und Passwort). Diese Token sind, wie Passwörter, geheimzuhalten. Alles, was du im GitHub-Repository hochlädst ist öffentlich!
 
-Gehe auf https://apps.twitter.com/ und klicke auf “Create New App” und fülle auf der folgenden Seite das Formular aus. Als “Website” kannst du eine beliebige gültige URL angeben, “Callback URL” kannst du leer lassen.
-
-Anschließend wirst du auf die Übersichtsseite für deine Twitter-Anwendung weitergeleitet. Unter dem Tab “Keys and Access Tokens” findest du Consumer (oder API-) Key und Secret, außerdem kannst du dort Access Token und Secret erstellen.
-
-Speicher die 4 Schlüssel in einer Text-Datei oder lass das Browser-Tab offen während du weiterarbeitest.
+* Gehe auf https://apps.twitter.com/ und klicke auf `Create New App`
+* Bei "Website" eine beliebige gültige URL angeben (z.B. `http://hpi.de`), "Callback URL" kann leer bleiben.
+* Auf der Übersichtsseite der Twitter-Anwendung: Unter dem Tab "Keys and Access Tokens" findest du `Consumer Key` und `Consumer Secret`.
+* Nach einem Klick auf "Create my access token" weiter unten auf der Seite können `Access Token` und `Access Token Secret` abgelesen werden.
+* Speicher die 4 Schlüssel in einer Text-Datei oder lass das Browser-Tab offen während du weiterarbeitest.
 
 # 2. Github
 ## 2.1. Account erstellen
-Falls nicht vorhanden, erstelle einen Account auf http://github.com.
+* Falls nicht vorhanden, erstelle einen GitHub-Account auf http://github.com.
 
 ## 2.2 Beispiel-Repository forken
 <p align="center"><img src="img/image6.png" width="300" align="right"></p>
 
-Um dir einen schnelleren Einstieg zu geben, haben wir bereits ein Programm vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository). Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
+Wir haben bereits einen Bot vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository).
+* Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
+
+## 2.3 Github-Repository auf den Rechner clonen
+
+Um die Dateien lokal zu bearbeiten und die Verbindung zu Github herzustellen, muss das Repository auf deinen Rechner mit git "geklont" werden.
+Grundsätzlich kann git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche (GUI) nutzen.
+Auf den Rechnern ist die GUI "GitExt" installiert (falls ihr auf eurem eigenen Windows-Rechner Git benutzen möchtet, empfehlen wir [TortoiseGit](https://tortoisegit.org/)). 
 
 <p align="center"><img src="img/image7.png" width="300" align="right"></p>
 
-Unter “Clone or Download” auf der Github-Seite deines neuen Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst.
+* Unter “Clone or Download” auf der Github-Seite deines Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst. (Der Download als Zip reicht nicht!)
 
 <p align="center"><img src="img/image5.png" width="300" align="right"></p>
 
-Lege dazu in deinem persönlichen Verzeichnis einen neuen Ordner an. In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, oder über das Kontextmenü im Windows-Explorer das Projekt herunterladen.
+* Lege in deinem persönlichen Verzeichnis einen neuen Ordner an. 
+* In diesem kannst du entweder über den Kommandozeilen-Befehl `git clone https://github.com/DEIN_ACCOUNT/py-twitter-bot`, oder über das Kontextmenü im Windows-Explorer `(Rechtsklick -> GitExt clone)` das Projekt klonen.
 
 # 3. Projekt lokal einrichten
 
 ## 3.1 Abhängigkeiten installieren
-Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten.
-Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
-Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen, oder per Kommandozeile: `C:\Python27\python.exe <Pfad zum Repo>\requirements.bat`.
+Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten. Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
+* Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen, oder per Kommandozeile: `C:\Python27\python.exe <Pfad zum Repo>\requirements.bat`.
 
 ## 3.2 Twitter Credentials im Bot eintragen
-Noch kann der Twitter Bot keine Tweets senden. Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
-Trage hier die Twitter Keys und Tokens ein.
+* Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
+* Trage hier die Twitter Access Keys und Tokens aus Schritt 1.2 ein.
 
-Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (Rechtsklick -> "Edit with IDLE").
-IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
-Das Programm kann mit <kbd>F5</kbd> gestartet werden.
-Auf Twitter sollte jetzt ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
+* Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (`Rechtsklick -> "Edit with IDLE"`). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
+* Das Programm kann mit <kbd>F5</kbd> gestartet werden.
+* Die Ausgabe enthät einen Link auf den soeben gesendeten Tweet. Auf Twitter sollte ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
+
+## 3.3 Die erste Änderung
+Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:SS on a DAY (DD-MM-YYYY)." Wenn du möchtest, ändere das Format der Uhrzeit, z.B. mit dem Names deines Bots.
+
+* Öffne dazu die `tweet_text.py` in der IDLE und ändere den Inhalt der Variable `text` (Zeile 22), z.B. in
+
+`text = berlin_time.strftime("Der HPI-Schülerkolleg Bot sagt: %H:%M:%S! %A (%d-%m-%Y).")`
+
+* Speichere deine Änderungen
+* Führe die `twitter_bot.py` aus (wiederum mit IDLE und <kbd>F5</kbd>) und schaue nach, ob der Bot nun anders twittert.
 
 # 4. Travis CI
-Als nächstes möchten wir Continuous Integration für das Projekt anlegen. Gehe dazu auf http://travis-ci.org. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden. Aktiviere automatische Builds für dein Repository.
+Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
 
-Wenn du das nächste mal eine Änderung “push”st, wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden. Klicke dazu in Travis auf die Badge, wähle als Format “Markdown” aus, und kopiere den Text in die `README.md` in deinem Projekt.
+<p align="right"><img src="img/travis.png" width="300" align="right"></p>
 
-<p align="center"><img src="img/image3.png" width="600" align="center"></p>
+* Gehe dazu auf http://travis-ci.org. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden.
+* Aktiviere automatische Builds für dein Repository.
 
-Commite (Rechtsklick -> Git Commit) und pushe die Änderung, und beobachte auf der Travis-Seite wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
+Wenn du das nächste mal eine Änderung "push"st (auf den Server bei Github überträgst), wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden.
+* Klicke dazu in Travis auf die Badge, wähle als Format "Markdown" aus, und kopiere den Text in die `README.md` in deinem Projekt.
+
+<p align="center"><img src="img/image3.png" width="450" align="center"></p>
+
+* Commite nun deine Änderung: 
+  * GitExt (`Rechtsklick -> GitExt Commit`) zeigt die welche Änderungen du vorgenommen hast (siehe 1 und 2).
+  * Stage (3) die geänderten Dateien damit die Änderung Teil des Commits ist.
+  * Trage dann eine Commit-Nachricht ein (4), die die Änderungen zusammenfasst und bestätige den Commit (5).
+
+<p align="center"><img src="img/image5b.png" width="450" align="center"></p>
+
+Nach dem Commit kannst du die Änderung pushen und auf der Travis-Seite beobachten wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
 
 # 5. Heroku
 
 ## 5.1 Account erstellen
 
-Damit du deinen Twitter-Bot nicht immer per Hand ausführen musst, möchten wir ihn jetzt auf Heroku deployen. Erstelle dazu einen Account auf http://heroku.com.
+Damit du deinen Twitter-Bot nicht immer per Hand ausführen musst, möchten wir ihn jetzt auf Heroku deployen. Heroku ist eine Plattform auf der Code kontinuierlich auf Servern ausgeführt werden kann.
+
+* Erstelle dazu einen Account auf http://heroku.com.
 
 ## 5.2 Anwendung erstellen
 
 <p align="center"><img src="img/image9.png" width="200" align="right"></p>
 
-Auf dem Dashboard, klicke auf “New” und “Create new app” und erstelle eine neue Anwendung.
-
-Unter “Deploy” wählst du “Github” als “Deployment Method”. Verbinde deinen Github-Account und wähle das richtige Repository aus.
+* Auf dem Heroku-Dashboard, klicke auf `New` und `Create new app` und erstelle eine neue Anwendung.
+* Unter `Deploy` wählst du “Github” als “Deployment Method”.
+* Verbinde deinen Github-Account und wähle das richtige Repository aus.
 
 <p align="center"><img src="img/image8.png" width="400" align="right"></p>
 
-Setze das Häkchen bei “Wait for CI to pass before deploy” und klicke auf “Enable Automatic Deploys”. Da automatische Deploys erst nach einem Push passieren, klickst du außerdem einmal unter “Manual Deploy” auf “Deploy Branch”.
+* Setze das Häkchen bei “Wait for CI to pass before deploy” und klicke auf “Enable Automatic Deploys”.
+* Da automatische Deploys erst nach einem Push passieren, kannst du außerdem unter “Manual Deploy” auf “Deploy Branch” klicken um ein deployment (das übertragen des codes zum Server) anzustoßen.
 
-Auch auf Heroku muss dein Bot wissen, wie er sich bei Twitter anmelden kann. Damit die geheimen Daten nicht in einer Datei gespeichert werden müssen, kannst du sie direkt in Heroku konfigurieren. Gehe auf das Tab “Settings”, klicke auf “Reveal Config Vars” und trage dort die 4 Schlüssel ein.
+Auch auf Heroku muss der Bot wissen, wie er sich bei Twitter anmelden kann. Damit die geheimen Daten nicht in einer Datei gespeichert werden müssen, kannst du sie direkt in Heroku konfigurieren.
+
+* Gehe auf das Tab `Settings`, klicke auf `Reveal Config Vars` und trage dort die 4 Access Keys / Tokens des Bots ein.
 
 ## 5.3 Anwendung auf Heroku starten
 
 <p align="center"><img src="img/image2.png" width="300" align="right"></p>
 
-Damit der Bot tatsächlich ausgeführt wird, wechselst du nun auf das Tab “Resources” und aktivierst dort den Clock-Prozess.
+* Damit der Bot tatsächlich ausgeführt wird, wechselst du nun auf das Tab `Resources` und aktivierst dort den Clock-Prozess.
 
 <p align="center"><img src="img/image1.png" width="200" align="right"></p>
 
 Die logs, d.h. die Nachrichten, die der Bot schreibt, können im Heroku-Interface nachgelesen werden. Hier kannst du überprüfen, ob der Bot erfolgreichen starten konnte. Falls du noch einen Twitter-Account hast, schreibe ihm doch einfach mal “hi!”. In spätestens 10 Minuten solltest du eine Antwort bekommen.
 
 # 6. Und noch viel weiter
-Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu erweitern. Öffne dazu die `tweet_text.py` in der IDLE. Tipp: wenn du den Bot testen möchtest, ohne jedes mal einen neuen Tweet zu senden, drücke <kbd>F5</kbd> um die Python Shell zu öffnen.
+Die verbleibende Zeit kannst du nutzen, um den Funktionsumfang deines Bots zu erweitern.
 
-Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen. Mit <kbd>Alt</kbd> + <kbd>n</kbd> und <kbd>Alt</kbd> + <kbd>p</kbd> musst du die Aufrufe nicht jedes mal neu schreiben.
+* Öffne dazu die `tweet_text.py` in der IDLE. Tipp: wenn du den Bot testen möchtest, ohne jedes mal einen neuen Tweet zu senden, drücke <kbd>F5</kbd> um die Python Shell zu öffnen.
+
+* Mit `idle_text()` und `reply({'text': 'hi!', 'user': {'screen_name': 'Foo'}})` kannst du die Funktionen direkt testen.
+* Mit <kbd>Alt</kbd> + <kbd>n</kbd> und <kbd>Alt</kbd> + <kbd>p</kbd> musst du die Aufrufe nicht jedes mal neu schreiben.
 
 Ein Cheatsheet für Python ist hier zu finden: [link](https://ddi.ifi.lmu.de/probestudium/2013/ws-i-3d-programmierung/tutorials/python-referenzkarte)
 
