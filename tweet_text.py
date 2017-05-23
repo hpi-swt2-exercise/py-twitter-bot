@@ -19,5 +19,19 @@ def idle_text():
     """Return text that is tweeted when not replying"""
     # Construct the text we want to tweet out (140 chars max)
     berlin_time = datetime.now(timezone('Europe/Berlin'))
-    text = berlin_time.strftime("It is %H:%M:%S on a %A (%d-%m-%Y).")
+    float i = random.random()
+    if i < 0.1:
+        text = berlin_time.strftime("It is %H:%M:%S on a %A (%d-%m-%Y).")
+    elif i < 0.2:
+        text = "git gud"
+    elif i < 0.3:
+        text = "Haha dumm"
+    elif i < 0.4:
+        text = "x"
+    elif i < 0.5:
+        text = "Das elektrische Feld beschreibt einen Raumzustand um eine Punkladung Q"
+    elif i < 0.6:
+        text = "The mitochondria is the powerhouse of the cell."
+    else:
+        text = "dumm"
     return text
