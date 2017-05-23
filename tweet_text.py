@@ -29,9 +29,9 @@ def idle_text():
     elif i < 0.4:
         text = "x"
     elif i < 0.5:
-        text = "Das elektrische Feld beschreibt einen Raumzustand um eine Punkladung Q"
+        text = "Das elektrische Feld beschreibt einen Raumzustand um eine Punktladung Q"
     elif i < 0.6:
         text = "The mitochondria is the powerhouse of the cell."
     else:
-        text = "dumm"
+        text = "*insert creative text*"
     return text
