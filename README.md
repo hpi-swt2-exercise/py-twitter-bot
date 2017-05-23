@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/fireangel17/py-twitter-bot.svg?branch=master)](https://travis-ci.org/fireangel17/py-twitter-bot)
+[![Build Status](https://travis-ci.org/CarlHauschke/py-twitter-bot.svg?branch=master)](https://travis-ci.org/CarlHauschke/py-twitter-bot)
 
-
+# Twitter-Bot
 Really simple [Twitter](https://twitter.com/) bot for educational purposes, written in [Python](https://www.python.org/), continually tested with [Travis CI](https://travis-ci.org/), deployed on [Heroku](https://heroku.com/).
 
-# 1. Twitter
+# 1. Twitter 
 ## 1.1 Account anlegen
 Der Bot benötigt Zugang zu einem Twitter-Account
 

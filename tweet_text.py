@@ -12,7 +12,7 @@ def reply(tweet):
     user = tweet['user']['screen_name']
     if "hi" in message.lower():
         berlin_time = datetime.now(timezone('Europe/Berlin'))
-        date = berlin_time.strftime("It is %H:%M:%S on a %A (%d-%m-%Y).")
+        date = berlin_time.strftime("It is %H:%M:%S on a %A (%d-%m-%Y). #Howitis (wap dap...)")
         return "Hi @" + user + "! " + date
     return None
 
