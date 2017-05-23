@@ -69,18 +69,6 @@ Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:
 * Speichere deine Änderungen
 * Führe die `twitter_bot.py` aus (wiederum mit IDLE und <kbd>F5</kbd>) und schaue nach, ob der Bot nun anders twittert.
 
-# 4. Travis CI
-Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
-
-<p align="right"><img src="img/travis.png" width="300" align="right"></p>
-
-* Gehe dazu auf http://travis-ci.org. Hier benötigst du keinen neuen Account, du kannst dich direkt über dein Github-Konto anmelden.
-* Aktiviere automatische Builds für dein Repository.
-
-Wenn du das nächste mal eine Änderung "push"st (auf den Server bei Github überträgst), wird Travis dein Projekt automatisch erstellen. Um jederzeit den Build-Status sehen zu können, kannst du eine Badge auf deiner Projekt-Seite einbinden.
-* Klicke dazu in Travis auf die Badge, wähle als Format "Markdown" aus, und kopiere den Text in die `README.md` in deinem Projekt.
-
-<p align="center"><img src="img/image3.png" width="450" align="center"></p>
 
 * Commite nun deine Änderung: 
   * GitExt (`Rechtsklick -> GitExt Commit`) zeigt die welche Änderungen du vorgenommen hast (siehe 1 und 2).
@@ -90,6 +78,8 @@ Wenn du das nächste mal eine Änderung "push"st (auf den Server bei Github übe
 <p align="center"><img src="img/image5b.png" width="450" align="center"></p>
 
 Nach dem Commit kannst du die Änderung pushen und auf der Travis-Seite beobachten wie dein Projekt gebaut wird. Nachdem der Vorgang erfolgreich abgeschlossen wurde, kannst du die Projektseite auf Github neu laden. Die Badge sollte jetzt grün erscheinen.
+
+[![Build Status](https://travis-ci.org/FlayInAHook/py-twitter-bot.svg?branch=master)](https://travis-ci.org/FlayInAHook/py-twitter-bot)
 
 # 5. Heroku
 
