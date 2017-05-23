@@ -8,6 +8,7 @@ from tweet_text import idle_text
 # In unittest, test cases are represented by instances of unittest's TestCase class.
 # To make your own test cases you must write subclasses of TestCase.
 
+
 class TestTweetText(unittest.TestCase):
 
     def test_idle(self):
@@ -16,5 +17,7 @@ class TestTweetText(unittest.TestCase):
         # https://docs.python.org/2/library/unittest.html#unittest.TestCase.assertTrue
         self.assertTrue( isinstance(idle_text(), str) )
 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+
+
+#if __name__ == '__main__':
+#    unittest.main(verbosity=2)
