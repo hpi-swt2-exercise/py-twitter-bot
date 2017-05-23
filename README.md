@@ -3,7 +3,7 @@
 # Twitter-Bot
 Really simple [Twitter](https://twitter.com/) bot for educational purposes, written in [Python](https://www.python.org/), continually tested with [Travis CI](https://travis-ci.org/), deployed on [Heroku](https://heroku.com/).
 
-# 1. Twitter
+# 1. Twitter 
 ## 1.1 Account anlegen
 Der Bot benötigt Zugang zu einem Twitter-Account
 
