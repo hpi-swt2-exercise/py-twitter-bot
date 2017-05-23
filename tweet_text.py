@@ -17,9 +17,27 @@ def reply(tweet):
     return None
 
 def idle_text():
-    # Some more ideas: https://www.programmableweb.com/category/humor/api
-    data = get('https://api.chucknorris.io/jokes/random').json()
-    joke = data['value']
-    return joke[0:139]
-
-
+    """Return text that is tweeted when not replying"""
+    # Construct the text we want to tweet out (140 chars max)
+    berlin_time = datetime.now(timezone('Europe/Berlin'))
+    float i = random.random()
+    if i < 0.1:
+        text = berlin_time.strftime("It is %H:%M:%S on a %A (%d-%m-%Y).")
+    elif i < 0.2:
+        text = "git gud"
+    elif i < 0.3:
+        text = "DROP TABLE GOOD_TEXTS;"
+    elif i < 0.4:
+        text = "x"
+    elif i < 0.5:
+        text = "Das elektrische Feld beschreibt einen Raumzustand um eine Punktladung Q"
+    elif i < 0.6:
+        text = "The mitochondria is the powerhouse of the cell."
+    elif i < 0.7:
+        text = "*insert creative text*"
+    else:
+      # Some more ideas: https://www.programmableweb.com/category/humor/api
+      data = get('https://api.chucknorris.io/jokes/random').json()
+      joke = data['value']
+      text = joke[0:139]
+    return text
