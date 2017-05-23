@@ -66,9 +66,6 @@ Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:
 
 `text = berlin_time.strftime("Der HPI-Schülerkolleg Bot sagt: %H:%M:%S! %A (%d-%m-%Y).")`
 
-* Speichere deine Änderungen
-* Führe die `twitter_bot.py` aus (wiederum mit IDLE und <kbd>F5</kbd>) und schaue nach, ob der Bot nun anders twittert.
-
 
 * Commite nun deine Änderung: 
   * GitExt (`Rechtsklick -> GitExt Commit`) zeigt die welche Änderungen du vorgenommen hast (siehe 1 und 2).
