@@ -25,7 +25,7 @@ def idle_text():
     elif i < 0.2:
         text = "git gud"
     elif i < 0.3:
-        text = "Haha dumm"
+        text = "DROP TABLE GOOD_TEXTS;"
     elif i < 0.4:
         text = "x"
     elif i < 0.5:
