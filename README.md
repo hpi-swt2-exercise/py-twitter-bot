@@ -59,7 +59,7 @@ Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in
 Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:SS on a DAY." Wenn du möchtest, ändere was der Bot von sich gibt.
 
 * Öffne dazu die `tweet_text.py` in der "IDLE" Umgebung (`Rechtsklick -> "Edit with IDLE"`). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots.
-* Ändere den Inhalt der Variable `text` (Zeile 22), z.B. in
+* Ändere den Inhalt der Variable `text` (Zeile 23), z.B. in
 
 `text = "Hallo HPI! Dies ist der Bot NAME"`
 
