@@ -32,7 +32,7 @@ Wir haben bereits einen Bot vorbereitet (https://github.com/hpi-swt2-exercise/py
 
 Um die Dateien lokal zu bearbeiten und die Verbindung zu Github herzustellen, muss das Repository auf deinen Rechner mit git "geklont" werden.
 Grundsätzlich kann git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche (GUI) nutzen.
-Auf den Rechnern ist die GUI "GitExt" installiert (falls ihr auf eurem eigenen Windows-Rechner Git benutzen möchtet, empfehlen wir [TortoiseGit](https://tortoisegit.org/)). 
+Auf den Rechnern ist die GUI "GitExt" installiert.
 
 <p align="center"><img src="img/image7.png" width="300" align="right"></p>
 
@@ -47,25 +47,24 @@ Auf den Rechnern ist die GUI "GitExt" installiert (falls ihr auf eurem eigenen W
 
 ## 3.1 Abhängigkeiten installieren
 Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten. Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
-* Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen, oder per Kommandozeile: `C:\Python27\python.exe <Pfad zum Repo>\requirements.bat`.
+* Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen.
 
 ## 3.2 Twitter Credentials im Bot eintragen
 * Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
 * Trage hier die Twitter Access Keys und Tokens aus Schritt 1.2 ein.
-
-* Nun kannst du das Programm `twitter_bot.py` in der "IDLE" Umgebung öffnen (`Rechtsklick -> "Edit with IDLE"`). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots. 
-* Das Programm kann mit <kbd>F5</kbd> gestartet werden.
+* Starte das Skript `run_bot` per Doppelklick.
 * Die Ausgabe enthät einen Link auf den soeben gesendeten Tweet. Auf Twitter sollte ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
 
 ## 3.3 Die erste Änderung
-Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:SS on a DAY (DD-MM-YYYY)." Wenn du möchtest, ändere das Format der Uhrzeit, z.B. mit dem Names deines Bots.
+Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:SS on a DAY." Wenn du möchtest, ändere was der Bot von sich gibt.
 
-* Öffne dazu die `tweet_text.py` in der IDLE und ändere den Inhalt der Variable `text` (Zeile 22), z.B. in
+* Öffne dazu die `tweet_text.py` in der "IDLE" Umgebung (`Rechtsklick -> "Edit with IDLE"`). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots.
+* Ändere den Inhalt der Variable `text` (Zeile 22), z.B. in
 
-`text = berlin_time.strftime("Der HPI-Schülerkolleg Bot sagt: %H:%M:%S! %A (%d-%m-%Y).")`
+`text = "Hallo HPI! Dies ist der Bot NAME"`
 
 * Speichere deine Änderungen
-* Führe die `twitter_bot.py` aus (wiederum mit IDLE und <kbd>F5</kbd>) und schaue nach, ob der Bot nun anders twittert.
+* Führe die `twitter_bot.py` aus (wiederum mit dem `run_bot` Skript) und schaue nach, ob der Bot nun anders twittert.
 
 # 4. Travis CI
 Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
