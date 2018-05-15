@@ -65,6 +65,7 @@ Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:
 
 * Speichere deine Änderungen
 * Führe die `twitter_bot.py` aus (wiederum mit dem `run_bot` Skript) und schaue nach, ob der Bot nun anders twittert.
+* Versuche, deine Änderungen zu "committen" (`GitExt commit...`) und wieder nach GitHub zu Übertragen, sodass andere sie sehen können. Du musst deine GitHub-Anmeldedaten eingeben, damit GitHub dich identifizieren kann.
 
 # 4. Travis CI
 Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
