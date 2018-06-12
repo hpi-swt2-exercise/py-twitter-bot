@@ -78,7 +78,12 @@ Die Änderungen am Bot liegen bis jetzt nur lokal in den Dateien auf dem Rechner
 
 * Versuche, deine Änderungen zu "committen" (Rechtsklick auf einen freien Platz im Exporer -> `GitExt commit...`) und wieder nach GitHub zu Übertragen. Auf GitHub ist die Änderung dann öffentlich und andere können sie sehen.
 * Dazu müssen die Änderungen zuerst dem sogenannten "staging" Bereich in git hinzugefügt werden, wo alle Änderungen für einen Commit zusammengefasst werden und mit einer Nachricht über den Zweck der Änderungen, der "commit message", zu einem Paket (dem Commit) zusammengefasst werden.
+
+<p align="center"><img src="img/gitext.png" width="1000" align="right"></p>
+
 * Dieser Commit muss dann nach GitHub übertragen werden ("gepusht" werden). Du musst deine GitHub-Anmeldedaten eingeben, damit GitHub dich identifizieren kann.
+
+
 
 <hr>
 
