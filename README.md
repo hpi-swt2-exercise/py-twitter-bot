@@ -53,7 +53,10 @@ Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, die der
 * Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen. Ein Kommandozeilenfenster öffnet sich. Prüft, dass keine Fehler geworfen werden.
 
 ## 3.2 Twitter Credentials im Bot eintragen
+<p align="center"><img src="img/file_extensions.png" width="500" align="right"></p>
+
 * Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
+* Achte darauf, dass die Dateiendung `.py` ist. Blende dazu im windows Explorer die Dateiendungen von Dateien ein (siehe Bild).
 * Trage hier die Twitter Access Keys und Tokens ein.
 * Starte das Skript `run_bot` per Doppelklick.
 * Die Ausgabe enthät einen Link auf den soeben gesendeten Tweet. Der Bot Account sollte einen Tweet abgesetzt haben, der die aktuelle Uhrzeit enthält.
@@ -73,7 +76,7 @@ Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is <HH:MM
 
 Die Änderungen am Bot liegen bis jetzt nur lokal in den Dateien auf dem Rechner vor. Um mit anderen zusammenzuarbeiten und ihnen den Code zugänglich zu machen, sollten sie wieder nach GitHub übertragen werden. Dazu müssen die Änderungen mit git zu einem Commit zusammengefasst und übertragen ("gepusht") werden.
 
-* Versuche, deine Änderungen zu "committen" (`GitExt commit...`) und wieder nach GitHub zu Übertragen. Auf GitHub ist die Änderung dann öffentlich und andere können sie sehen.
+* Versuche, deine Änderungen zu "committen" (Rechtsklick auf einen freien Platz im Exporer -> `GitExt commit...`) und wieder nach GitHub zu Übertragen. Auf GitHub ist die Änderung dann öffentlich und andere können sie sehen.
 * Dazu müssen die Änderungen zuerst dem sogenannten "staging" Bereich in git hinzugefügt werden, wo alle Änderungen für einen Commit zusammengefasst werden und mit einer Nachricht über den Zweck der Änderungen, der "commit message", zu einem Paket (dem Commit) zusammengefasst werden.
 * Dieser Commit muss dann nach GitHub übertragen werden ("gepusht" werden). Du musst deine GitHub-Anmeldedaten eingeben, damit GitHub dich identifizieren kann.
 
