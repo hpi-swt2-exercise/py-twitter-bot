@@ -26,17 +26,20 @@ Der Bot benötigt für den Zugriff auf Twitter Zugangsdaten (API keys und tokens
 <p align="center"><img src="img/image6.png" width="300" align="right"></p>
 
 Wir haben bereits einen Bot vorbereitet (https://github.com/hpi-swt2-exercise/py-twitter-bot, dieses Repository).
-* Mit dem  “Fork” Knopf oben rechts kann ein eigene Kopie vom Projekt erstellt werden.
+* Obwohl der Code auf  GitHub öffentlich ist, gibt es Zugriffsbeschränkungen. Nicht jeder kann Änderungen vornehmen.
+* _Aber_: ihr könnt eine eigene Kopie des Codes anlegen, die ihr dann beliebig verändern könnt!
+* Mit dem "Fork" Knopf ganz oben rechts auf dieser Webseite kann ein eigene Kopie vom Projekt erstellt werden, die eurem GitHub Account zugeordnet ist.
 
 ## 2.3 Github-Repository auf den Rechner clonen
 
-Um die Dateien lokal zu bearbeiten und die Verbindung zu Github herzustellen, muss das Repository auf deinen Rechner mit git "geklont" werden.
+Die Dateien des kopierten Projekt liegen aber weiterhin ausschließlich auf GitHub.
+Um die Dateien lokal zu bearbeiten und die Verbindung zu Github herzustellen, muss das Projekt, das "Repository" auf deinen Rechner mit git kopiert werden (mit git "geklont" werden).
 Grundsätzlich kann git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche (GUI) nutzen.
 Auf den Rechnern ist die GUI "GitExt" installiert.
 
 <p align="center"><img src="img/image7.png" width="300" align="right"></p>
 
-* Unter “Clone or Download” auf der Github-Seite deines Projekts findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst. (Der Download als Zip reicht nicht!)
+* Unter “Clone or Download” auf der Github-Seite deines Projekts (die URL sollte `https://github.com/<DEINGITHUBNAME>/py-twitter-bot` sein) findest du die Git-URL, mit der du das Projekt auf deinen Rechner klonen kannst. (Der Download als Zip reicht nicht!)
 
 <p align="center"><img src="img/image5.png" width="300" align="right"></p>
 
@@ -46,26 +49,33 @@ Auf den Rechnern ist die GUI "GitExt" installiert.
 # 3. Projekt lokal einrichten
 
 ## 3.1 Abhängigkeiten installieren
-Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, sind in einer `requirements.txt` festgehalten. Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
+Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, die der Bot verwendet um mit den Twitter-Servern zu interagieren, sind in einer `requirements.txt` festgehalten. Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
 * Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen.
 
 ## 3.2 Twitter Credentials im Bot eintragen
 * Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
-* Trage hier die Twitter Access Keys und Tokens aus Schritt 1.2 ein.
+* Trage hier die Twitter Access Keys und Tokens ein.
 * Starte das Skript `run_bot` per Doppelklick.
-* Die Ausgabe enthät einen Link auf den soeben gesendeten Tweet. Auf Twitter sollte ein Tweet erscheinen, der die aktuelle Uhrzeit enthält.
+* Die Ausgabe enthät einen Link auf den soeben gesendeten Tweet. Der Bot Account sollte einen Tweet abgesetzt haben, der die aktuelle Uhrzeit enthält.
 
 ## 3.3 Die erste Änderung
-Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is HH:MM:SS on a DAY." Wenn du möchtest, ändere was der Bot von sich gibt.
+Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is <HH:MM:SS> on a <DAY>." Wenn du möchtest, ändere was der Bot von sich gibt.
 
 * Öffne dazu die `tweet_text.py` in der "IDLE" Umgebung (`Rechtsklick -> "Edit with IDLE"`). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots.
 * Ändere den Inhalt der Variable `text` (Zeile 23), z.B. in
 
-`text = "Hallo HPI! Dies ist der Bot NAME"`
+`text = "Hallo HPI! Dies ist der Bot <NAMEDESBOTS>"`
 
 * Speichere deine Änderungen
-* Führe die `twitter_bot.py` aus (wiederum mit dem `run_bot` Skript) und schaue nach, ob der Bot nun anders twittert.
-* Versuche, deine Änderungen zu "committen" (`GitExt commit...`) und wieder nach GitHub zu Übertragen, sodass andere sie sehen können. Du musst deine GitHub-Anmeldedaten eingeben, damit GitHub dich identifizieren kann.
+* Führe das den Bot aus, wiederum mit dem `run_bot` Skript und schaue nach, ob der Bot nun anders twittert.
+
+## 3.4 Änderungen nach GitHub übertragen (Committen)
+
+Die Änderungen am Bot liegen bis jetzt nur lokal in den Dateien auf dem Rechner vor. Um mit anderen zusammenzuarbeiten und ihnen den Code zugänglich zu machen, sollten sie wieder nach GitHub übertragen werden. Dazu müssen die Änderungen mit git zu einem Commit zusammengefasst und übertragen ("gepusht") werden.
+
+* Versuche, deine Änderungen zu "committen" (`GitExt commit...`) und wieder nach GitHub zu Übertragen. Auf GitHub ist die Änderung dann öffentlich und andere können sie sehen.
+* Dazu müssen die Änderungen zuerst dem sogenannten "staging" Bereich in git hinzugefügt werden, wo alle Änderungen für einen Commit zusammengefasst werden und mit einer Nachricht über den Zweck der Änderungen, der "commit message", zu einem Paket (dem Commit) zusammengefasst werden.
+* Dieser Commit muss dann nach GitHub übertragen werden ("gepusht" werden). Du musst deine GitHub-Anmeldedaten eingeben, damit GitHub dich identifizieren kann.
 
 # 4. Travis CI
 Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
