@@ -50,7 +50,7 @@ Auf den Rechnern ist die GUI "GitExt" installiert.
 
 ## 3.1 Abhängigkeiten installieren
 Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, die der Bot verwendet um mit den Twitter-Servern zu interagieren, sind in einer `requirements.txt` festgehalten. Diese müssen auf euren Rechnern installiert sein, damit der Bot funktioniert.
-* Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen.
+* Im `script` Ordner liegt eine `requirements.bat` Datei, die die Abhängigkeiten unter Windows installiert. Ihr könnt es durch Doppelklick ausführen. Ein Kommandozeilenfenster öffnet sich. Prüft, dass keine Fehler geworfen werden.
 
 ## 3.2 Twitter Credentials im Bot eintragen
 * Kopiere die Datei `credentials.example.py` und nenne die Kopie `credentials.py`. Zu deiner Sicherheit ist das Repository bereits so konfiguriert, dass diese Datei nicht hochgeladen wird.
@@ -61,7 +61,7 @@ Alle Abhängigkeiten des Twitter-Bots, d.h. aller Code aus Bibliotheken, die der
 ## 3.3 Die erste Änderung
 Der Bot tweetet im Moment die Uhrzeit immer nach demselben Schema: "It is <HH:MM:SS> on a <DAY>." Wenn du möchtest, ändere was der Bot von sich gibt.
 
-* Öffne dazu die `tweet_text.py` in der "IDLE" Umgebung (`Rechtsklick -> "Edit with IDLE"`). IDLE ist eine Programmierumgebung für Python, der Programmiersprache des Bots.
+* Öffne die Datei `tweet_text.py` in einem Texteditor. Zum Beispiel der "IDLE" (`Rechtsklick -> "Edit with IDLE"`) einer Programmierumgebung für Python oder "Notepad++".
 * Ändere den Inhalt der Variable `text` (Zeile 23), z.B. in
 
 `text = "Hallo HPI! Dies ist der Bot <NAMEDESBOTS>"`
