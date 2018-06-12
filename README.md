@@ -5,7 +5,7 @@ Really simple [Twitter](https://twitter.com/) bot for educational purposes, writ
 ## 1.1 Account anlegen
 Der Bot benötigt Zugang zu einem Twitter-Account
 
-* Falls ein bestehender Account verwendet werden soll: Schritt überspringen.
+* __Falls ein bestehender Account verwendet wird: Schritt 1.2. überspringen, direkt zu Schritt 2.__
 
 ## 1.2 API Keys erstellen  
 <p align="center"><img src="img/image4.png" width="300" align="right"></p>
