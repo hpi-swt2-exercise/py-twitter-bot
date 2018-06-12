@@ -10,7 +10,7 @@ Der Bot benötigt Zugang zu einem Twitter-Account
 ## 1.2 API Keys erstellen  
 <p align="center"><img src="img/image4.png" width="300" align="right"></p>
 
-Der Bot benötigt für den Zugriff auf Twitter API keys und tokens (statt Username und Passwort). Diese Token sind, wie Passwörter, geheimzuhalten. Alles, was du im GitHub-Repository hochlädst ist öffentlich!
+Der Bot benötigt für den Zugriff auf Twitter Zugangsdaten (API keys und tokens, die sozusagen Name und Passwort für Programme darstellen). Diese Token sind, wie Passwörter, geheimzuhalten. Alles, was du im GitHub-Repository hochlädst ist öffentlich!
 
 * Gehe auf https://apps.twitter.com/ und klicke auf `Create New App`
 * Bei "Website" eine beliebige gültige URL angeben (z.B. `http://hpi.de`), "Callback URL" kann leer bleiben.
