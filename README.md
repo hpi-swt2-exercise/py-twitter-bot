@@ -30,10 +30,10 @@ Wir haben bereits einen Bot vorbereitet (https://github.com/hpi-swt2-exercise/py
 * _Aber_: ihr könnt eine eigene Kopie des Codes anlegen, die ihr dann beliebig verändern könnt!
 * Mit dem "Fork" Knopf ganz oben rechts auf dieser Webseite kann ein eigene Kopie vom Projekt erstellt werden, die eurem GitHub Account zugeordnet ist.
 
-## 2.3 Github-Repository auf den Rechner clonen
+## 2.3 Github Projekt auf den Rechner kopieren
 
-Die Dateien des kopierten Projekt liegen aber weiterhin ausschließlich auf GitHub.
-Um die Dateien lokal zu bearbeiten und die Verbindung zu Github herzustellen, muss das Projekt, das "Repository" auf deinen Rechner mit git kopiert werden (mit git "geklont" werden).
+Die Dateien des kopierten/geclonten Projekts liegen weiterhin ausschließlich auf GitHub.
+Um die Dateien lokal zu bearbeiten und die Verbindung zu Github herzustellen, muss das Projekt, das "Repository" auf deinen Rechner mit git kopiert werden (mit git "geclont" werden).
 Grundsätzlich kann git entweder über die Kommandozeile (`cmd`) oder mit einer grafischen Oberfläche (GUI) nutzen.
 Auf den Rechnern ist die GUI "GitExt" installiert.
 
@@ -76,6 +76,13 @@ Die Änderungen am Bot liegen bis jetzt nur lokal in den Dateien auf dem Rechner
 * Versuche, deine Änderungen zu "committen" (`GitExt commit...`) und wieder nach GitHub zu Übertragen. Auf GitHub ist die Änderung dann öffentlich und andere können sie sehen.
 * Dazu müssen die Änderungen zuerst dem sogenannten "staging" Bereich in git hinzugefügt werden, wo alle Änderungen für einen Commit zusammengefasst werden und mit einer Nachricht über den Zweck der Änderungen, der "commit message", zu einem Paket (dem Commit) zusammengefasst werden.
 * Dieser Commit muss dann nach GitHub übertragen werden ("gepusht" werden). Du musst deine GitHub-Anmeldedaten eingeben, damit GitHub dich identifizieren kann.
+
+<hr>
+
+**Ihr habt jetzt ein eigenes GitHub Repository mit einem Twitterbot, mit euren eigenen Änderungen, welche andere einsehen können!**
+
+Könnt ihr anderen helfen?
+<hr>
 
 # 4. Travis CI
 Als nächstes möchten wir Continuous Integration für das Projekt anlegen.
